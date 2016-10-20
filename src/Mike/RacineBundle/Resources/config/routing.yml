@@ -1,0 +1,3 @@
+mike_racine_homepage:
+    path:     /
+    defaults: { _controller: MikeRacineBundle:Default:index }

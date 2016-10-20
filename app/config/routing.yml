@@ -1,0 +1,4 @@
+mike_racine:
+    resource: "@MikeRacineBundle/Resources/config/routing.yml"
+    prefix:   /
+
