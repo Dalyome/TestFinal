@@ -1,0 +1,3 @@
+mike_twig_homepage:
+    path:     /
+    defaults: { _controller: MikeTwigBundle:Default:index }
