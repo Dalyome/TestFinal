@@ -1,5 +1,6 @@
 {% extends "MikeRacineBundle::layout.html.twig" %}
- {% block menu %}
+
+{% block menu %}
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="{{path("mike_racine_homepage")}}">accueil</a></li>
@@ -16,24 +17,26 @@
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
-          <h1>Bundle CRUD</h1>
+          <h1>Article edit</h1>
     {% endblock %}
-    {% block soustitre %}<p>crud</p>{% endblock %}
-    {% block content %}yes</div>
-         <p>
-    <ul>
-        <li><a href="{{path("CRUD_article_index")}}">Accueil du CRUD</li></a>
-        <li><a href="{{path("CRUD_article_new")}}">Ajuter article</li></a>
-    </ul>
-    </p>
+    {% block soustitre %}{% endblock %}
+    {% block content %}</div>
 
-    {% for article in articles %}
-        <h3>{{ article.title }}</h3>
-        <p>{% if article.date %}{{ article.date|date('Y-m-d H:i:s') }}{% endif %}</p>
-        <p>{{ article.text }}</p>
-        <p>{{ article.utilisateurid }}</p>
-        {% for section in article.section %}
-        <p>{{ section }}</p>
-        {% endfor %}
-    {% endfor %}
-    {% endblock %}
+    
+
+    {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+        <input type="submit" value="Edit" />
+    {{ form_end(edit_form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('CRUD_article_index') }}">Back to the list</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
