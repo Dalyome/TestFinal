@@ -1,0 +1,3 @@
+mike_crud_homepage:
+    path:     /
+    defaults: { _controller: MikeCRUDBundle:Default:index }
