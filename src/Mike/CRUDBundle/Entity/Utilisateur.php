@@ -36,5 +36,66 @@ class Utilisateur
     private $dirstname;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return Utilisateur
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+    public function __toString()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set dirstname
+     *
+     * @param string $dirstname
+     *
+     * @return Utilisateur
+     */
+    public function setDirstname($dirstname)
+    {
+        $this->dirstname = $dirstname;
+
+        return $this;
+    }
+
+    /**
+     * Get dirstname
+     *
+     * @return string
+     */
+    public function getDirstname()
+    {
+        return $this->dirstname;
+    }
+}

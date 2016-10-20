@@ -20,4 +20,10 @@
     {% endblock %}
     {% block soustitre %}<p>crud</p>{% endblock %}
     {% block content %}yes</div>
+         <p>
+    <ul>
+        <li><a href="{{path("CRUD_article_index")}}">Accueil du CRUD</li>
+        <li><a href="{{path("CRUD_article_new")}}">Ajuter article</li>
+    </ul>
+    </p>
     {% endblock %}

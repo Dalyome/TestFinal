@@ -75,5 +75,144 @@ class Article
         $this->section = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set title
+     *
+     * @param string $title
+     *
+     * @return Article
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    /**
+     * Get title
+     *
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Set text
+     *
+     * @param string $text
+     *
+     * @return Article
+     */
+    public function setText($text)
+    {
+        $this->text = $text;
+
+        return $this;
+    }
+
+    /**
+     * Get text
+     *
+     * @return string
+     */
+    public function getText()
+    {
+        return $this->text;
+    }
+
+    /**
+     * Set date
+     *
+     * @param \DateTime $date
+     *
+     * @return Article
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * Get date
+     *
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * Set utilisateurid
+     *
+     * @param \Mike\CRUDBundle\Entity\Utilisateur $utilisateurid
+     *
+     * @return Article
+     */
+    public function setUtilisateurid(\Mike\CRUDBundle\Entity\Utilisateur $utilisateurid = null)
+    {
+        $this->utilisateurid = $utilisateurid;
+
+        return $this;
+    }
+
+    /**
+     * Get utilisateurid
+     *
+     * @return \Mike\CRUDBundle\Entity\Utilisateur
+     */
+    public function getUtilisateurid()
+    {
+        return $this->utilisateurid;
+    }
+
+    /**
+     * Add section
+     *
+     * @param \Mike\CRUDBundle\Entity\Section $section
+     *
+     * @return Article
+     */
+    public function addSection(\Mike\CRUDBundle\Entity\Section $section)
+    {
+        $this->section[] = $section;
+
+        return $this;
+    }
+
+    /**
+     * Remove section
+     *
+     * @param \Mike\CRUDBundle\Entity\Section $section
+     */
+    public function removeSection(\Mike\CRUDBundle\Entity\Section $section)
+    {
+        $this->section->removeElement($section);
+    }
+
+    /**
+     * Get section
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSection()
+    {
+        return $this->section;
+    }
+}
