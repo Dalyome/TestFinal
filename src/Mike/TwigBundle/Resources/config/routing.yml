@@ -1,3 +1,15 @@
 mike_twig_homepage:
     path:     /
     defaults: { _controller: MikeTwigBundle:Default:index }
+mike_twig_condition:
+    path:     /si
+    defaults: { _controller: MikeTwigBundle:Default:condition }
+mike_twig_boucle:
+    path:     /boucles/{chiffre}/{chiffre2}
+    defaults:  
+        _controller: MikeTwigBundle:Default:boucle
+        chiffre: 10
+        chiffre2: 1
+    requirements: 
+        chiffre: \d+
+        chiffre2: \d+

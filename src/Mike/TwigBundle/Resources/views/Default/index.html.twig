@@ -10,3 +10,27 @@
       </div>
     </nav>
 {% endblock %}
+{% block titre %}
+    
+         <div class="container theme-showcase" role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+          <h1>Bundle Twig</h1>
+    {% endblock %}
+    {% block soustitre %}<p>Menu Twig</p>{% endblock %}
+    {% block content %}yes</div>
+    {% block menu2 %}
+       
+          <ul>
+            <li><a href="{{path("mike_twig_homepage")}}">accueil</a></li>
+            <li><a href="{{path("mike_twig_condition")}}">Condition</a></li>
+            <li><a href="{{path("mike_twig_boucle")}}">Boucles</a></li>
+          </ul>
+    {% endblock %}
+    {% block contenu %}
+        <p>Twig is a template engine for the PHP programming language. Its syntax originates from Jinja and Django templates.[3] It's an open source product[4] licensed under a BSD License and maintained by Fabien Potencier. The initial version was created by Armin Ronacher. Symfony2 PHP framework comes with a bundled support for Twig as its default template engine.[5]<p>
+          
+    {% endblock %}
+{% endblock %}
+    {% block footer %}</div>{% endblock %}
